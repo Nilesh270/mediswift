@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import "../index.css"
-import { Search } from '@mui/icons-material';
+import { AccountCircle, KeyboardArrowDown, Search, ShoppingCart } from '@mui/icons-material';
 import Logo from '../images/Logo.png'
+import { Badge } from '@mui/material';
 
 const Container = styled.div`
     
@@ -24,14 +25,12 @@ const Left = styled.div`
 
 `;
 const Center = styled.div`
-  flex:50%;
+  flex:45%;
   display:flex;
-  justify-content:start;
+  justify-content:space-between;
   align-items:center;
 `;
-const Right = styled.div`
-  flex:30%;
-`;
+
 const SearchWrapper = styled.div`
   height:35px;
   width:500px;
@@ -48,14 +47,55 @@ const SerachInput = styled.input`
   font-size:16px;
   &:focus-visible {
     outline: none;
-  }
-
-  
+  } 
 `;
+
 const Img = styled.img`
   height:90%;
   margin-left:30px;
 `
+const DeliveryPin = styled.div`
+  color:white;
+`;
+const ExpDel = styled.div``;
+const SelectPin = styled.div`
+  display:flex;
+  align-items:center;
+  font-weight:600;
+  font-size:18px;
+`;
+const Right = styled.div`
+  flex:35%;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  margin-right:40px;
+  
+`;
+const Button = styled.button`
+  width:100px;
+  height:30px;
+  border-radius:2px;
+  border:none;
+  margin:0px 15px;
+  font-weight:600;
+  
+`;
+const Cart = styled.div`
+    color:white;
+`;
+const Profile = styled.div`
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:0px 15px;
+`;
+const Name = styled.div`
+  font-size:18px;
+  margin:0px 5px;
+`;
+
 
 
 const Navbar = () => {
@@ -70,8 +110,24 @@ const Navbar = () => {
                   <SerachInput  type='text' placeholder='Search Medicines/Healthcare Products'></SerachInput>
                   <Search/>
               </SearchWrapper>
+              <DeliveryPin>
+                  <ExpDel>Express Delivery to</ExpDel>
+                  <SelectPin>Select Pincode <KeyboardArrowDown/></SelectPin>
+              </DeliveryPin>
             </Center>
-            <Right></Right>
+            <Right>
+              <Button>Register</Button>
+              <Button>Login</Button>
+              <Profile>
+                <AccountCircle/>
+                 <Name>Nilesh</Name>
+              </Profile>
+              <Cart>
+                <Badge badgeContent={2} color='primary'>
+                    <ShoppingCart/>
+                </Badge>
+              </Cart>
+            </Right>
         </Wrapper>
     </Container>
   )
