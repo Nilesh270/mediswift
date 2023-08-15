@@ -1,16 +1,15 @@
-import React from 'react';
-import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
 
+import React from "react";
+import Navbar from "./components/Navbar";
+import Bottom from "./components/Bottom";
+import Blogs from "./components/Blogs";
 const App = () => {
   return (
     <>
-      <Home/>
-      {/* <Login/>
-      <Register/> */}
+      <Navbar />
+      <Blogs />
+      <Bottom />
     </>
-  )
-}
-
+  );
+};
 export default App;
