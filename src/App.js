@@ -1,3 +1,4 @@
+
 import React from "react";
 import Navbar from "./components/Navbar";
 import Bottom from "./components/Bottom";
@@ -11,5 +12,3 @@ const App = () => {
     </>
   );
 };
-
-export default App;
