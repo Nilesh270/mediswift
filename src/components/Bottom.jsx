@@ -15,12 +15,9 @@ const Container = styled.div`
 `;
 const GridWrapper = styled.div`
   position: static;
-  /* left: 0;
-  bottom: 0; */
   width: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
-  /* height: 30vh; */
   background-color: #03b0be;
 `;
 const Logo = styled.img`

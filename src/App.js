@@ -1,14 +1,17 @@
-
 import React from "react";
-import Navbar from "./components/Navbar";
-import Bottom from "./components/Bottom";
-import Blogs from "./components/Blogs";
+import Home from './pages/Home';
+import Blogs from "./pages/Blogs";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+
+
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Blogs />
-      <Bottom />
+      <Home/>
+      <Blogs/>
+      <Login/>
+      <Register/>
     </>
   );
 };
