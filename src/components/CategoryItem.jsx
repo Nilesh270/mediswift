@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import demoimg from '../images/demoimg.png';
+
 
 
 const Container = styled.div`
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 const Item = styled.div`
       height:70%;
-      width:160px;
+      
       background:white;
       display:flex;
       justify-content:center;
@@ -24,21 +24,24 @@ const Item = styled.div`
       flex-direction:column;
       margin:10px;
       border-radius:10px;
-      border: 1px solid lightgrey;
 `;
 const Img = styled.img`
     height:90%;
 `;
 const Itemname = styled.div``;
 
-const CategoryItem = () => {
+const CategoryItem = ({item,itemType}) => {
+  const imgWidth = itemType === 'Offers' ? '300px' : '160px';
+  const imgborder = itemType === 'Offers' ? 'none' : '1px solid lightgrey';
+  
+
   return (
     <Container>
         <Wrapper>
           <Item>
-            <Img src={demoimg} />  
+            <Img src={item.img} style={{ width: imgWidth, border: imgborder}} />  
           </Item>
-          <Itemname>Top Products</Itemname>
+          <Itemname>{item.title}</Itemname>
         </Wrapper>
     </Container>
   )

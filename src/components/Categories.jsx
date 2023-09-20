@@ -3,6 +3,7 @@ import React , {useState} from 'react';
 import styled from 'styled-components';
 import CategoryHead from './CategoryHead';
 import CategoryItem from './CategoryItem';
+import { CategoryData, FeatureBrand,Offers } from '../categoriesdata';
 
 const Container = styled.div`
   overflow:hidden;
@@ -55,6 +56,26 @@ const Categories = (props) => {
         setSlideIndex(slideIndex<2 ? slideIndex +1 :0);
       }
   }
+  const { CategoryType } = props;
+  let data ;
+  switch(CategoryType){
+    case 'CategoryData':
+      data = CategoryData;
+      break;
+
+    case 'FeatureBrand':
+      data = FeatureBrand;
+      break;
+
+    case 'Offers':
+      data = Offers;
+      break;
+
+    default:
+      data = CategoryData;
+      break;
+  }
+  
   return (
     <Container>
       <CategoryHead Headingtext={props.Heading} />
@@ -62,21 +83,12 @@ const Categories = (props) => {
         <Arrow style={{left:"30px"}}>
             <ArrowLeft onClick={()=>{ handleClick("left")}} />
         </Arrow>
-        <Items slideindex={slideIndex}>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
-            <CategoryItem/>
+        <Items slideindex={slideIndex}>    
+              {
+                data.map((item)=>(
+                  <CategoryItem item={item} key={item.id} itemType={CategoryType} />
+                ))
+              }
         </Items>
         <Arrow style={{right :"30px"}} >
             <ArrowRight onClick={()=>{ handleClick("right")}}/>

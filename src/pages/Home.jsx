@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <div>
       <Navbar/>
-        <Categories Heading="Shop By Categories"/>
+        <Categories Heading="Shop By Categories" CategoryType="CategoryData"/>
+        <Categories Heading="Trending Brands" CategoryType="FeatureBrand"/>
+        <Categories Heading="Offers" CategoryType="Offers"/>
       <Footer/>
     </div>
   )
