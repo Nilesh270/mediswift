@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const Container = styled.div`
   background-color: white;
   border-radius: 15px;
@@ -36,6 +37,14 @@ const Category = styled.div`
   padding-top: 15px;
   padding-bottom: 0.5rem;
 `;
+const Subscribe = styled.h1`
+  fontSize: 1.3rem;
+  color: #464748;
+  fontWeight: 400;
+  paddingBottom: 0.5rem;
+`;
+
+
 const BlogCard = (props) => {
   return (
     <Container>
@@ -44,16 +53,7 @@ const BlogCard = (props) => {
       </BlogImageWrapper>
       <Content>
         <Category>{props.category}</Category>
-        <h1
-          style={{
-            fontSize: "1.3rem",
-            color: "#464748",
-            fontWeight: "400",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          {props.title}
-        </h1>
+        <Subscribe>{props.title}</Subscribe>
         <p>{props.textContent}</p>
       </Content>
     </Container>

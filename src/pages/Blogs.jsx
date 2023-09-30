@@ -163,6 +163,7 @@ const Blogs = () => {
                     <p>Lab Tests</p>
                   </BtnText>
                 </Button>
+
                 <LastButton>
                   <Button>
                     <BtnIcon>
@@ -173,6 +174,7 @@ const Blogs = () => {
                     </BtnText>
                   </Button>
                 </LastButton>
+                
                 <Services>Recommended Blogs</Services>
                 <BlogCard
                   imgsrc={image1}

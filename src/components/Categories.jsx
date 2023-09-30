@@ -47,16 +47,16 @@ const Items = styled.div`
 
 
 const Categories = (props) => {
-  const [slideIndex,setSlideIndex] = useState(0)
+  const [slideIndex,setSlideIndex] = useState(-2)
   const handleClick = (direction)=>{
       if(direction==="left"){
         setSlideIndex(slideIndex>0 ? slideIndex -1 :2);
       }
       else{
-        setSlideIndex(slideIndex<2 ? slideIndex +1 :0);
+        setSlideIndex(slideIndex<2 ? slideIndex +1 :-2);
       }
   }
-  const { CategoryType } = props;
+  const { CategoryType,background } = props;
   let data ;
   switch(CategoryType){
     case 'CategoryData':
@@ -77,13 +77,13 @@ const Categories = (props) => {
   }
   
   return (
-    <Container>
-      <CategoryHead Headingtext={props.Heading} />
+    <Container style={{background:background}}>
+      <CategoryHead Headingtext={props.Heading}  />
       <Wrapper >
         <Arrow style={{left:"30px"}}>
             <ArrowLeft onClick={()=>{ handleClick("left")}} />
         </Arrow>
-        <Items slideindex={slideIndex}>    
+        <Items slideindex={slideIndex} >    
               {
                 data.map((item)=>(
                   <CategoryItem item={item} key={item.id} itemType={CategoryType} />

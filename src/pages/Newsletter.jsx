@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+
+
 const Subscribe = styled.button`
   background-color: #03b0be;
   color: #ffffff;
@@ -20,13 +22,13 @@ const Newsletter = styled.div`
     margin-bottom: 1rem;
   }
 `;
-const Services = styled.h1`
-  padding-top: 3rem;
-  font-size: 2rem;
-  color: #464748;
-  margin-bottom: 10px;
-  font-weight: 700;
-`;
+// const Services = styled.h1`
+//   padding-top: 3rem;
+//   font-size: 2rem;
+//   color: #464748;
+//   margin-bottom: 10px;
+//   font-weight: 700;
+// `;
 const SearchWrapper = styled.div`
   border-radius: 10px;
   height: 5vh;

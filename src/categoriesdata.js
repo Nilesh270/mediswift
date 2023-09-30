@@ -145,4 +145,8 @@ export const Offers = [
     {
         img:'https://cdn01.pharmeasy.in/dam/banner/banner/9c5159faed8-ORTHO-CARE.jpg?dim=1440x0',
     },
+    {
+        img:'https://cdn01.pharmeasy.in/dam/banner/banner/9c5159faed8-ORTHO-CARE.jpg?dim=1440x0',
+    },
+    
 ]
