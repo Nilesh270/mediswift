@@ -4,6 +4,8 @@ import Blogs from "./pages/Blogs";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import LabTests from "./pages/LabTests";
+import Cart from "./pages/Cart";
+import Singleproduct from './pages/Singleproduct'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <Login />
       <Register />
       <LabTests />
+      <Cart/>
+      <Singleproduct/>
     </>
   );
 };

@@ -106,17 +106,17 @@ const BtnText = styled.div`
 const ContentRight = styled.div`
   padding-left: 2rem;
 `;
-const SerachInput = styled.input`
-  width: 90%;
-  margin-left: -2rem;
-  height: 100%;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px #03b0be solid;
-  &:focus-visible {
-    outline: none;
-  }
-`;
+// const SerachInput = styled.input`
+//   width: 90%;
+//   margin-left: -2rem;
+//   height: 100%;
+//   font-size: 16px;
+//   border: none;
+//   border-bottom: 2px #03b0be solid;
+//   &:focus-visible {
+//     outline: none;
+//   }
+// `;
 
 const Blogs = () => {
   return (
